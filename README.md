@@ -45,6 +45,7 @@ root@ubuntu:~# /spiders/env_py2.7/bin/supervisord -c /spiders/tornado_api/conf/t
 root@ubuntu:~# /spiders/env_py2.7/bin/supervisorctl -c /spiders/tornado_api/conf/tornado_super.conf status
 ```
 在虚拟机的浏览器上访问http://127.0.0.1:9001/，输入账号：xiaomo，密码：19940809，即可查看进程管理界面
+
 重启nginx：
 ```
 root@ubuntu:~# /etc/init.d/nginx restart
