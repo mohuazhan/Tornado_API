@@ -1,6 +1,0 @@
-INFO:handlers.common:Handling uri: /v1/spider/hotsearch/weibo
-INFO:tornado.access:200 POST /v1/spider/hotsearch/weibo (192.168.1.109) 1361.87ms
-INFO:handlers.common:Handling uri: /v1/spider/hotsearch/weibo
-INFO:tornado.access:200 POST /v1/spider/hotsearch/weibo (192.168.1.109) 1022.20ms
-INFO:handlers.common:Handling uri: /v1/spider/hotsearch/weibo
-INFO:tornado.access:200 POST /v1/spider/hotsearch/weibo (192.168.1.109) 864.96ms

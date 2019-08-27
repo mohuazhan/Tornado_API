@@ -9,9 +9,14 @@ from routes import routes
 
 define('host', default='127.0.0.1', help='the ip listening on', type=str)
 define('port', default=8888, help='run on the given port', type=int)
-define('log_path', default='./tmp_log', help='log path ', type=str)
+define('log_path', default='./tmp_logs', help='log path ', type=str)
 
-logging.basicConfig(filename='%s/tornado.log' % options.log_path, level=logging.INFO)
+# 在未使用Supervisor部署时，可通过以下方式设置日志路径
+# logging.basicConfig(
+#     filename='%s/tornado.log' % options.log_path,
+#     level=logging.INFO,
+#     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+#     )
 
 
 def make_app():

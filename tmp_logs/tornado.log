@@ -1,0 +1,2 @@
+2019-08-26 17:35:14,362 - handlers.common - INFO - Handling uri: /v1/spider/hotsearch/weibo
+2019-08-26 17:35:15,347 - tornado.access - INFO - 200 POST /v1/spider/hotsearch/weibo (192.168.1.109) 985.59ms
