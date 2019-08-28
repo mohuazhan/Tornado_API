@@ -72,7 +72,7 @@ root@ubuntu:~# systemctl restart nginx.service
 ```
 (env_py2.7) root@ubuntu:/spiders/tornado_exmple# pip install swagger-py-codegen
 ```
-在http://editor.swagger.io/在线编辑API文档，导出为.yaml文件，修改后缀并命名为为api.yml，
+在 http://editor.swagger.io/ 在线编辑API文档，导出为.yaml文件，修改后缀并命名为为api.yml，
 将api.yml放在/spiders/tornado_exmple/下，然后生成demo代码文件：
 ```
 (env_py2.7) root@ubuntu:/spiders/tornado_exmple# swagger_py_codegen -s api.yml example-app -p demo -tlp=tornado --ui --spec
