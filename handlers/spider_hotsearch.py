@@ -34,7 +34,7 @@ class WeiboHotsearchHandler(CommonHandler):
         date = request_data['date']
         version = request_data['version']
         token = request_data['token']
-        re_token = param_md5(keyword + platform + version + 'mo')
+        re_token = param_md5(keyword + platform + date + version + 'mo')
         if re_token == token:
             return keyword, platform, date
         else:
