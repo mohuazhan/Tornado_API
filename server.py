@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
+import os
 from tornado import web, ioloop, autoreload
 from tornado.options import options, define
 
@@ -20,7 +21,11 @@ define('log_path', default='./tmp_logs', help='log path ', type=str)
 
 
 def make_app():
-    return web.Application(routes, debug=False)
+    return web.Application(
+        routes,
+        debug=False,
+        # static_path=os.path.join(os.path.dirname(__file__), "static")  # 静态目录访问
+    )
 
 
 def start_server():

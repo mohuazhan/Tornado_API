@@ -1,0 +1,119 @@
+{
+  "info": {
+    "version": "1.0.0", 
+    "contact": {
+      "email": "919656720@qq.com"
+    }, 
+    "description": "\u6b64\u6587\u6863\u63d0\u4f9b API \u8bf7\u6c42\u65b9\u5f0f\u76f8\u5173\u63cf\u8ff0\uff0c\u4ece\u8fd9\u91cc\u53ef\u4ee5\u83b7\u53d6\u5230\u5404\u7c7b\u70ed\u641c\u7684\u8be6\u7ec6\u6570\u636e", 
+    "title": "\u722c\u866b API \u6587\u6863"
+  }, 
+  "paths": {
+    "/spider/hotsearch/weibo": {
+      "post": {
+        "responses": {
+          "400": {
+            "content": {}, 
+            "description": "Bad Request"
+          }, 
+          "401": {
+            "content": {}, 
+            "description": "Unauthorized"
+          }, 
+          "404": {
+            "content": {}, 
+            "description": "Not Found"
+          }, 
+          "500": {
+            "content": {}, 
+            "description": "Internal Server Error"
+          }, 
+          "405": {
+            "content": {}, 
+            "description": "Method Not Allowed"
+          }
+        }, 
+        "tags": [
+          "HotSearch"
+        ], 
+        "summary": "\u83b7\u53d6\u4e00\u6761\u5fae\u535a\u70ed\u641c", 
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Date"
+              }
+            }, 
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Date"
+              }
+            }
+          }, 
+          "required": true, 
+          "description": "\u9700\u8981\u53d1\u8d77\u8bf7\u6c42\u7684\u6570\u636e\u7ed3\u6784"
+        }, 
+        "security": [
+          {
+            "petstore_auth": [
+              "write:pets", 
+              "read:pets"
+            ]
+          }
+        ], 
+        "operationId": "crawlHotSearch"
+      }
+    }
+  }, 
+  "components": {
+    "schemas": {
+      "Date": {
+        "xml": {
+          "name": "Date"
+        }, 
+        "required": [
+          "date"
+        ], 
+        "type": "object", 
+        "properties": {
+          "date": {
+            "type": "string", 
+            "example": "2019/08/23"
+          }, 
+          "platform": {
+            "type": "string", 
+            "example": "weibo"
+          }, 
+          "token": {
+            "type": "string", 
+            "example": "cc86467a0e957ad372a29691209471f3", 
+            "format": "md5(keyword + platform + date + version + 'mo')"
+          }, 
+          "version": {
+            "type": "string", 
+            "example": "1.0"
+          }, 
+          "keyword": {
+            "type": "string", 
+            "example": "hotsearch"
+          }
+        }
+      }
+    }
+  }, 
+  "tags": [
+    {
+      "externalDocs": {
+        "url": "enlightent.cn", 
+        "description": "\u6e90\u7f51\u7ad9\u57df\u540d"
+      }, 
+      "name": "HotSearch", 
+      "description": "\u5404\u5927\u5e73\u53f0\u70ed\u641c\u6570\u636e\u7684\u91c7\u96c6"
+    }
+  ], 
+  "servers": [
+    {
+      "url": "http://192.168.1.89:8088/v1"
+    }
+  ], 
+  "openapi": "3.0.1"
+}
