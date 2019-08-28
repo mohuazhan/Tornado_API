@@ -13,6 +13,20 @@ class CommonHandler(RequestHandler):
 
     executor = ThreadPoolExecutor(8)
 
+
+    def set_default_headers(self):
+        # 解决服务端跨域的问题
+        self.set_header('Access-Control-Allow-Origin', '*')
+        self.set_header('Access-Control-Allow-Headers', '*')
+        self.set_header('Content-type', 'application/json')
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
+
+    def options(self):
+        # 前后端分离，前端使用vue，会发一个options请求，后台就需要实现这个options方法
+        self.set_status(204)
+        self.finish()
+
+
     def __init__(self, *args, **kwargs):
         super(CommonHandler, self).__init__(*args, **kwargs)
         self.response_body = dict()
