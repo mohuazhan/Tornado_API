@@ -8,6 +8,7 @@
 | v1.1 | 新增Tornado API部署 |
 | v1.2 | 解决服务端跨域问题 |
 | v1.3 | 使用Swagger-UI展示API文档 |
+| v1.4 | 新增[日志文档](/log_dir.txt)和[文件说明](/file_explain.md) |
 
 ## v1.0：项目程序运行
 
